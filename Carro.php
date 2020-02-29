@@ -1,12 +1,12 @@
 <?php
 
-class Carro
+ abstract class Carro
 {
 
 	const MODELO = "MOBI";	
 
 	private $cor;
-	protected $potencia = 1.0;
+	static protected $potencia = 1.0;
 	private $ligado = false;
 	private $velocidade = 0;
 
@@ -28,6 +28,14 @@ class Carro
 	public function ligaDesliga()
 	{
 		$this->ligado = !$this->ligado;	
+	}
+
+	static public function informarVersao()
+	{
+		//self -> this
+		//self -> apenas na mesma classe
+		//static -> pega a herança		
+		echo static::MODELO ." ". static::$potencia. "\n";	
 	}
 }
 ?>

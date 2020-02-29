@@ -1,0 +1,7 @@
+<?php
+
+//final evita que a classe seja herdada
+class CarroTunado extends Carro14Turbo
+{
+
+}
